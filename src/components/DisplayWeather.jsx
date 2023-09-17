@@ -99,6 +99,16 @@ const DisplayWeather = (props) => {
                   <div className="temp">{weather.main.temp}°C</div>
                   <div className="weather">{weather.weather[0].main}</div>
                 </div>
+                <div className="weather_values">
+                  <div className="humidity">Humidity:</div>
+                  <div className="humidity_value">{weather.main.humidity}%</div>
+                  <div className="pressure">Pressure:</div>
+                  <div className="pressure_value">
+                    {weather.main.pressure}mbar
+                  </div>
+                  <div className="feels">Real feel:</div>
+                  <div className="feels_value">{weather.main.feels_like}°</div>
+                </div>
               </div>
             ) : (
               ""

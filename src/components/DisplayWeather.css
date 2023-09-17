@@ -53,13 +53,6 @@ main {
   text-align: center;
   box-shadow: 3px 6px rgba(50, 50, 70, 0.5);
 }
-@media (max-width: 600px) {
-  .temp {
-    position: static; /* Change from absolute to static */
-    font-size: 50px;
-    margin-top: 20%; /* Add margin-top to push it down */
-  }
-}
 
 .weather {
   margin-top: 20px;
@@ -83,4 +76,55 @@ main {
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
   text-align: center;
   box-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+}
+
+.weather_values {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create two columns for labels and values */
+  align-items: center; /* Vertically align items to the center */
+}
+
+.humidity,
+.pressure,
+.feels {
+  margin-left: 40%;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+  margin-bottom: 15px;
+  background-color: rgb(179, 176, 176);
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+}
+
+.humidity_value,
+.pressure_value,
+.feels_value {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+  margin-left: 60%; /* Adjust this margin as needed for spacing */
+  margin-bottom: 15px;
+}
+@media (max-width: 600px) {
+  .humidity,
+  .pressure,
+  .feels {
+    margin-left: 5%; /* Adjust the left margin for smaller screens */
+  }
+
+  .humidity_value,
+  .pressure_value,
+  .feels_value {
+    margin-left: 40%; /* Adjust the left margin for smaller screens */
+  }
+  .temp {
+    position: static; /* Change from absolute to static */
+    font-size: 50px;
+    margin-top: 20%; /* Add margin-top to push it down */
+  }
 }

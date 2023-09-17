@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 const SearchRegionName = () => {
-  const [name, setName] = useState("");
+  const [countryName, setCountryName] = useState("");
+  const [cityName, setCityName] = useState("");
+  const [stateName, setStateName] = useState("");
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -14,7 +16,7 @@ const SearchRegionName = () => {
           throw new Error("No such place exists!");
         }
         const data = await response.json();
-        setName(data);
+        setCountryName(data);
         console.log(data);
       } catch (error) {
         setError(error.message);
@@ -23,12 +25,8 @@ const SearchRegionName = () => {
 
     fetchRegionNames();
   }, []);
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-  return <div>{name}</div>;
 };
 
 export default SearchRegionName;
+
+//CURRENTLY NOT USING THIS COMPONENT ANYWHERE

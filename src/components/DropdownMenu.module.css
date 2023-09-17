@@ -12,7 +12,7 @@
   transform: translate(-50%, -50%);
 }
 
-.modal:hover {
+.items:hover {
   background-color: rgb(221, 215, 245);
 }
 
@@ -23,6 +23,11 @@
 .modal ul li {
   border-bottom: 1px solid grey;
   padding: 10px 0;
+}
+
+.content {
+  max-height: 150px; /* Adjust the value as needed */
+  overflow-y: auto;
 }
 
 @media (max-width: 600px) {
