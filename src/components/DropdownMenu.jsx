@@ -35,7 +35,6 @@ let cityNames = [
   "Anantapur",
   "Chandragiri",
   "Chittoor",
-
   "Eluru",
   "Guntur",
   "Kadapa",
@@ -566,7 +565,6 @@ let cityNames = [
   "Uttarakhand",
   "West Bengal1",
   "Andaman and Nicobar Islands",
-
   "Lakshadweep",
   "Ladakh",
 ];
